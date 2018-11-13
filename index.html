@@ -1,33 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>FFC Plp</title>
-</head>
-<!-- AT LEAST 1 MEDIA QUERY-->
-<!--CSS FLEX BOX AT LEAST ONCE-->
-<body>
-    <header id="header">
-        <img id="header-img"/>
-        <!--ALWAYS ON TOP OF VIEW PORT-->
-        <nav id="navber">
-            <a class="nav-link"></a>
-            <a class="nav-link"></a>
-            <a class="nav-link"></a>
-            <!--THESE MUST NAV TO OTHER AREA ON THE PAGE-->
-        </nav>
-    </header>
-    <video id="video" width="320" height="240" controls>
-        <source src="movie.mp4" type="video/mp4">
-        <source src="movie.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-    </video>
-    <form id="form">
-        <input type="email" id="email" placeholder="email"/>
-        <input type="submit"/><!-- submit email to mock url-->
-    </form>
-    
-</body>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ffc Product Landing Page</title>
+        <link rel="icon" href="./favicon.png" sizes="16x16 32x32" type="image/png">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <!-- AT LEAST 1 MEDIA QUERY-->
+    <!--CSS FLEX BOX AT LEAST ONCE-->
+
+    <body>
+        <!--<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>-->
+        <header id="header" class="header m-effect-1">
+            <img id="header-img" class="header-img" src="./logo.png" alt="Company Logo" />
+            <!--ALWAYS ON TOP OF VIEW PORT-->
+            <nav id="nav-bar" class="navbar">
+                <a class="nav-link btn m-effect-2" href="#graphic-design">Graphic Design</a>
+                <a class="nav-link btn m-effect-2" href="#development">Website Development</a>
+                <a class="nav-link btn m-effect-2" href="#hosting">Hosting</a>
+                <!--THESE MUST NAV TO OTHER AREA ON THE PAGE-->
+            </nav>
+        </header>
+
+        <div class="header-clear-fix"></div>
+
+        <div class="page-body">
+            <section class="section">
+                <div class="card m-effect-1 m-effect-border-1">
+                    <h1 class="video-header">
+                        Responsive web design
+                    </h1>
+                    <video id="video" class="video " poster="./Mock-up.jpg" width="100%" height="auto" controls>
+                        <source src="./Mock-up.mp4" type="video/mp4">
+                        <source src="./Mock-up.ogv" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <div class="card-body">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                            ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                            voluptate
+                            velit
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                            proident,
+                            sunt
+                            in culpa qui officia deserunt mollit anim id est laborum. Donec elementum ligula eu sapien
+                            consequat eleifend.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="graphic-design" class="section">
+                <div class="card m-effect-1 m-effect-border-1">
+                    <div class="card-top-img" style="background: url('./graphicdesign3.jpg') no-repeat center"></div>
+                    <h1 class="card-header">
+                        Graphic Design
+                    </h1>
+                    <div class="card-body">
+                        <p>
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section">
+                <div id="development" class="card m-effect-1 m-effect-border-1">
+                    <div class="card-top-img" style="background: url('./development2.jpg') center / 110%;"></div>
+                    <h1 class="card-header">
+                        Website Development
+                    </h1>
+                    <div class="card-body">
+                        <p>
+                            Donec elementum ligula eu sapien consequat eleifend. Donec nec dolor erat, condimentum
+                            sagittis sem. Praesent porttitor porttitor risus, dapibus rutrum ipsum gravida et. Integer
+                            lectus nisi, facilisis sit amet eleifend nec, pharetra ut augue. Integer quam nunc,
+                            consequat nec egestas ac, volutpat ac nisi. Sed consectetur dignissim dignissim. Donec
+                            pretium est sit amet ipsum fringilla feugiat. Aliquam erat volutpat.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="section">
+                <div id="hosting" class="card m-effect-1 m-effect-border-1">
+                    <div class="card-top-img" style="background: url('./hosting2.jpg') center / 110%;"></div>
+                    <h1 class="card-header">
+                        Hosting
+                    </h1>
+                    <div class="card-body">
+                        <p>
+                            Maecenas scelerisque, orci sit amet cursus tincidunt, libero nisl eleifend tortor, vitae
+                            cursus risus mauris vitae nisi. Cras laoreet ultrices ligula eget tempus. Aenean metus
+                            purus, iaculis ut imperdiet eget, sodales et massa. Duis pellentesque nisl vel massa
+                            dapibus non lacinia velit volutpat. Maecenas accumsan interdum sodales. In hac habitasse
+                            platea dictumst. Pellentesque ornare blandit orci, eget tristique risus convallis ut.
+                            Vivamus a sapien neque.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <footer class="footer">
+
+            <h1 class="footer-heading">
+                Let us contact you
+            </h1>
+            <form id="form" class="footer-form m-effect-2" action="https://www.freecodecamp.com/email-submit">
+                <input type="email" name="email" class="form-input" id="email" placeholder="your email" />
+                <input id="submit" class="btn form-button" type="submit"><!-- submit email to mock url-->
+            </form>
+
+        </footer>
+
+    </body>
+
 </html>
