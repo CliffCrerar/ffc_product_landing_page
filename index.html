@@ -27,10 +27,32 @@
 
         <div class="header-clear-fix"></div>
 
+        <!-- NOT RELATED TO PROJECT >> -->
         <div class="ffc-logo">
-            <img class="ffc-logo-img" src="./ffc_logo.png" alt="freeCodeCamp logo">
-        </div>
+            <a href="#" id="ffcLogo" class="ffc-logo-anchor">
 
+                <svg class="ffc-logo-info-icon" aria-hidden="true" data-prefix="fas" data-icon="info-circle" class="svg-inline--fa fa-info-circle fa-w-16"
+                    role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path fill="currentColor" d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"></path>
+                </svg>
+
+                <div class="ffc-logo-inner">
+                    <img class="ffc-logo-img" src="./ffc_logo.png" alt="freeCodeCamp logo">
+                </div>
+
+            </a>
+        </div>
+        <!--<< NOT RELATED TO PROJECT -->
+
+        <div id="ffcLogoMsg" class="ffc-logo-msg m-effect-2">
+            <b>DISCLAIMER:</b><br>
+            This is a <b>learning project</b> for freeCodeCamp and does not represent a real world company. The company
+            name
+            and logo for <b>web4u</b> is fictitious. The
+            services described here are also fictitious and not available for consumer use.
+            <span class="ffc-logo-msg-dismiss">Dismiss</span>
+        </div>
+        <!-- << NOT RELATED TO PROJECT-->
 
         <div class="page-body">
             <section class="section">
@@ -132,7 +154,38 @@
             </form>
 
         </footer>
+        <!--SCRIPT BELOW NOT RELATED TO PROJECT-->
+        <script>
+            // Set disclaimer to hide
+            document.querySelector('#ffcLogoMsg').style.display = 'none';
+            // Function to show and hide disclaimer message
+            function hideShowDisclaimer(el, event) {
+                const state = el.style.display;
+                const eventComb = (state === 'block' && (event === 'scroll' || event === 'click')) ? true : false;
+                if (eventComb) {
+                    el.style.display = 'none';
+                } else if (state === 'none', event === 'click') {
+                    el.style.display = 'block';
+                    // Adds a dismiss action
+                    el.addEventListener('click', function () {
+                        el.style.display = 'none';
+                    });
+                }
+            }
+            // Listens for click event
+            document.getElementById('ffcLogo').addEventListener('click', function (ev) {
+                ev.preventDefault();
+                const msgDisplayState = document.querySelector('#ffcLogoMsg');
+                hideShowDisclaimer(msgDisplayState, 'click');
+            });
+            // Litenst for scroll event
+            window.addEventListener('scroll', function () {
+                const msgDisplayState = document.querySelector('#ffcLogoMsg');
+                hideShowDisclaimer(msgDisplayState, 'scroll');
+            });
 
+        </script>
+        <!--SCRIPT ABOVE NOT RELATED TO PROJECT-->
     </body>
 
 </html>

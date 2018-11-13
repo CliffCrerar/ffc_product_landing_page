@@ -58,8 +58,19 @@ body{
 
 .ffc-logo{
     position: fixed;
+    right: 0;
+}
+
+.ffc-logo-anchor{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.ffc-logo-inner{
     background: #006400;
-    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
 }
 
 .ffc-logo-img{
@@ -67,6 +78,65 @@ body{
     max-width: 100%;
     height: auto;
     max-height: 3vh;
+}
+
+.ffc-logo-info-icon{
+    display: none;
+    color: rgb(255, 166, 0);
+    height: 3vh;
+    width: auto;
+    margin-right: 5px;
+}
+
+.ffc-logo:hover div{
+    background: black;
+}
+
+.ffc-logo:hover svg{
+    display: block;
+}
+
+.ffc-logo-msg{
+    text-align: justify;
+    border: 2px solid red;
+    font-size: 2em;
+    position: fixed;
+    background: white;
+    width: 70%;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    padding: 10px;
+    z-index: 10000;
+    margin-top: 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-transform:translate(-50%,-50%);
+    -moz-transform:translate(-50%,-50%);
+    -ms-transform:translate(-50%,-50%);
+    -o-transform:translate(-50%,-50%);
+}
+
+.ffc-logo-msg b{
+    color: red;
+}
+
+.ffc-logo-msg-dismiss{
+    position: absolute ;
+    right: 1%;
+    bottom: 1%;
+    font-size: 0.50em;
+    color: rgb(158, 158, 158);
+    text-decoration-line: underline;
+    -moz-text-decoration-line: underline;
+}
+
+.ffc-logo-msg-dismiss:hover{
+    cursor: pointer;
+    color: blue;
 }
 
 .header{
@@ -231,4 +301,9 @@ body{
     .footer-form input{
         font-size: 0.75em;
     }
+    .ffc-logo-msg{
+        font-size: 1.0em;
+        width: 90%;
+    }
+
 }
