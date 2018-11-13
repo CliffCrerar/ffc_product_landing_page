@@ -14,7 +14,7 @@ html{
 
 body{
     margin: 0;
-    width: 100vw;
+    max-width: 100vw;
     background: #FAFAFA;
 }
 
@@ -54,6 +54,19 @@ body{
     --nav-width-m: 100%;
     --nav-link-padding: 5px 3vw 5px 3vw;
     --nav-link-width-m: 100%;
+}
+
+.ffc-logo{
+    position: fixed;
+    background: #006400;
+    border-bottom-right-radius: 7px;
+}
+
+.ffc-logo-img{
+    padding: 3px 3px 0px 3px;
+    max-width: 100%;
+    height: auto;
+    max-height: 3vh;
 }
 
 .header{
